@@ -12,7 +12,26 @@
 {% set p_logs_endpoint_from_kibana = (logs_endpoint_from_kibana | default(false) ) %}
 {% set p_include_non_serverless_index_settings = (include_non_serverless_index_settings | default(build_flavor != "serverless")) %}
 {% set p_integration_ratios = (integration_ratios | default({
-
+    "auditbeat": {
+      "corpora": {
+        "auditbeat-security": 1.0
+      }
+    },
+    "filebeat": {
+      "corpora": {
+        "filebeat-security": 1.0
+      }
+    },
+    "metricbeat": {
+      "corpora": {
+        "metricbeat-security": 1.0
+      }
+    },
+    "packetbeat": {
+      "corpora": {
+        "packetbeat-security": 1.0
+      }
+    },
     "winlogbeat": {
       "corpora": {
         "winlogbeat-security": 1.0
