@@ -70,26 +70,26 @@
 {% for integration in p_integration_ratios.keys() %}
 {% if integration == "logs-endpoint" %}
     {
-        "name": "logs-endpoint.events.file-default"
+        "name": "logs-endpoint.events.file-test1"
     },
     {
-        "name": "logs-endpoint.events.library-default"
+        "name": "logs-endpoint.events.library-test1"
     },
     {
-        "name": "logs-endpoint.events.network-default"
+        "name": "logs-endpoint.events.network-test1"
     },
     {
-        "name": "logs-endpoint.events.process-default"
+        "name": "logs-endpoint.events.process-test1"
     },
     {
-        "name": "logs-endpoint.events.registry-default"
+        "name": "logs-endpoint.events.registry-test1"
     },
     {
-        "name": "logs-endpoint.events.security-default"
+        "name": "logs-endpoint.events.security-test1"
     }{{ ", " if not loop.last else "" }}
 {% else %}
     {
-      "name": "{{ integration + "-default" }}"
+      "name": "{{ integration + "-test1" }}"
     }{{ ", " if not loop.last else "" }}
 {% endif %}
 {% endfor %}
@@ -222,7 +222,7 @@
       "base-url": "{{ p_corpora_uri_base }}/data/security/7.16",
       "documents": [
         {
-          "target-data-stream": "logs-endpoint.events.file-default",
+          "target-data-stream": "logs-endpoint.events.file-test1",
           "source-file": "logs-endpoint.events.file-default-documents.json.bz2",
           "document-count": 4315173
         }
@@ -233,7 +233,7 @@
       "base-url": "{{ p_corpora_uri_base }}/data/security/7.16",
       "documents": [
         {
-          "target-data-stream": "logs-endpoint.events.library-default",
+          "target-data-stream": "logs-endpoint.events.library-test1",
           "source-file": "logs-endpoint.events.library-default-documents.json.bz2",
           "document-count": 4076972
         }
@@ -244,7 +244,7 @@
       "base-url": "{{ p_corpora_uri_base }}/data/security/7.16",
       "documents": [
         {
-          "target-data-stream": "logs-endpoint.events.network-default",
+          "target-data-stream": "logs-endpoint.events.network-test1",
           "source-file": "logs-endpoint.events.network-default-documents.json.bz2",
           "document-count": 4724387
         }
@@ -255,7 +255,7 @@
       "base-url": "{{ p_corpora_uri_base }}/data/security/7.16",
       "documents": [
         {
-          "target-data-stream": "logs-endpoint.events.process-default",
+          "target-data-stream": "logs-endpoint.events.process-test1",
           "source-file": "logs-endpoint.events.process-default-documents.json.bz2",
           "document-count": 3508529
         }
@@ -266,7 +266,7 @@
       "base-url": "{{ p_corpora_uri_base }}/data/security/7.16",
       "documents": [
         {
-          "target-data-stream": "logs-endpoint.events.registry-default",
+          "target-data-stream": "logs-endpoint.events.registry-test1",
           "source-file": "logs-endpoint.events.registry-default-documents.json.bz2",
           "document-count": 4535375
         }
@@ -277,14 +277,14 @@
       "base-url": "{{ p_corpora_uri_base }}/data/security/7.16",
       "documents": [
         {
-          "target-data-stream": "logs-endpoint.events.security-default",
+          "target-data-stream": "logs-endpoint.events.security-test1",
           "source-file": "logs-endpoint.events.security-default-documents.json.bz2",
           "document-count": 6036935
         }
 {% else %}
     {
       "name": "{{ integration + "-security" }}",
-      "target-data-stream": "{{ integration + "-default" }}",
+      "target-data-stream": "{{ integration + "-test1" }}",
       "base-url": "{{ p_corpora_uri_base }}/data/security/7.16",
       "documents": [
 {% endif %}
