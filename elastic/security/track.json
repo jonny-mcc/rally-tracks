@@ -72,6 +72,7 @@
     {
         "name": "logs-endpoint.events.file-test1"
     }
+  ]
     }{{ ", " if not loop.last else "" }}
 {% else %}
     {
