@@ -71,7 +71,21 @@
 {% if integration == "logs-endpoint" %}
     {
         "name": "logs-endpoint.events.file-test1"
-    }
+    },
+    {
+        "name": "logs-endpoint.events.library-test1"
+    },
+    {
+        "name": "logs-endpoint.events.network-test1"
+    },
+    {
+        "name": "logs-endpoint.events.process-test1"
+    },
+    {
+        "name": "logs-endpoint.events.registry-test1"
+    },
+    {
+        "name": "logs-endpoint.events.security-test1"
     }{{ ", " if not loop.last else "" }}
 {% else %}
     {
